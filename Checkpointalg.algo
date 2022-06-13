@@ -1,0 +1,24 @@
+ALGORITHM algorithm_name
+VAR
+    fph:="";
+    nOfcharacters:INTEGER=0;
+    nOfLetters:INTEGER=0;
+    nOfVoyels:INTEGER=0;
+    i:INTEGER=0;
+BEGIN
+    Read(fph);
+    WHILE (fph[i]<>".") DO
+        i=i+1;
+        nOfcharacters++;
+        IF (fph[i]=" ") THEN
+            nOflLetters++;
+        END_IF
+        IF (fph[i]="a" OR fph[i]="A" OR fph[i]="e" OR fph[i]="E" OR fph[i]="i" OR fph[i]="I" OR fph[i]="o" OR fph[i]="O" OR fph[i]="u" OR fph[i]="U" OR fph[i]="y" OR fph[i]="Y") THEN
+            nOfVoyels++;
+        END_IF
+        
+    END_WHILE
+    Write("the number of characters is =",nOfcharacters)
+    Write("the number of Letters is =",nOfLetters)
+    Write("the number of Voyels is =",nOfVoyels)
+END
